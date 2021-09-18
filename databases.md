@@ -1,8 +1,8 @@
 # Database Access Information
 ### Dev Database:
-**Username:** `jdools05`
+**Username:** `someusername`
 
-**Password:** `jdools05*1234`
+**Password:** `somepassword`
 
 **DB name:** `jd05_trader`
 
