@@ -1,0 +1,51 @@
+#################################
+### Main Application Settings ###
+#################################
+MainSettings:
+  # Level at of which the bot will start displaying logging information. Valid logging
+  # levels are as follows in order from most output to least output:
+  #  - ALL
+  #  - TRACE
+  #  - DEBUG
+  #  - INFO
+  #  - WARN
+  #  - ERROR
+  #  - FATAL
+  #  - OFF
+  logLevel: INFO
+
+
+#########################
+### Database Settings ###
+#########################
+DatabaseSettings:
+  # The IP or URL of the server hosting the API's database
+  address: mariadb.celestialdata.net
+
+  # The database server port
+  port: 3306
+
+  # The name of the database the API should use
+  name: jd05_trader
+
+  # The username the API will use to access the database
+  username: jdools05
+
+  # The password the API will use to access the database
+  password: jdools05*1234
+
+  # Configure how to handle updating and creating the database scheme. Valid options
+  # are as follows. Please make sure you understand the implications of your selected option.
+  #  - none: Take no action, this will require you to manually load a database
+  #          schema if one does not exist in the database.
+  #
+  #  - create: Create a blank database scheme if one does not exist. This will
+  #            only occur if the database is currently empty.
+  #
+  #  - drop-and-create: Drop the existing database and create a new empty one. Use this
+  #                     with caution as it will remove all data in an existing database.
+  #
+  #  - update: Use a best-effort to update the existing database to match what is defined in the
+  #            application code. If a change that could cause data-loss is defined, the application
+  #            will fail to startup and the database will require manual migrations to the expected schema.
+  generationStrategy: update
