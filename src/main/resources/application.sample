@@ -20,19 +20,19 @@ MainSettings:
 #########################
 DatabaseSettings:
   # The IP or URL of the server hosting the API's database
-  address: mariadb.celestialdata.net
+  address: localhost
 
   # The database server port
   port: 3306
 
   # The name of the database the API should use
-  name: jd05_trader
+  name: mocktrader
 
   # The username the API will use to access the database
-  username: jdools05
+  username: someusername
 
   # The password the API will use to access the database
-  password: jdools05*1234
+  password: somepassword
 
   # Configure how to handle updating and creating the database scheme. Valid options
   # are as follows. Please make sure you understand the implications of your selected option.
