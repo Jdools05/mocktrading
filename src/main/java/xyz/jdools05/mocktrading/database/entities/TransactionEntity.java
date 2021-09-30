@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 @SuppressWarnings("unused")
 @Entity
 @Table(name = "Transactions")
-public class Transaction extends PanacheEntityBase {
+public class TransactionEntity extends PanacheEntityBase {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "transaction_id", nullable = false)
-    public Long id;
+    public int id;
 
     @Column(name = "transaction_market_identifier_code")
     public String mic;
@@ -30,4 +30,7 @@ public class Transaction extends PanacheEntityBase {
 
     @Column(name = "transaction_value")
     public BigDecimal value;
+
+    @ManyToOne(optional = false, cascade = CascadeType.PERSIST)
+    public UserEntity user;
 }
